@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
   before_action :set_post!, only: [:show, :edit, :update]
   validates :title, presences: true 
-  validates :content, length: {
+  validates :content, length: {minimum: 100}
 
   def show
   end
