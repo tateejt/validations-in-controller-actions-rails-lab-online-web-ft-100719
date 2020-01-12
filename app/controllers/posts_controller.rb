@@ -1,5 +1,7 @@
 class PostsController < ApplicationController
   before_action :set_post!, only: [:show, :edit, :update]
+  validates :title, presences: true 
+  validates :content, 
 
   def show
   end
